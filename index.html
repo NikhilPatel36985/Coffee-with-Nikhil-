@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@100..700&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Lobster&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Playwrite+VN:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <!-- <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQt9v9xNDwlusQjmBXtXYJ2LwX3SHuH_C4S4xEnECZ8F2xfXBiZ" alt=""> -->
+                 <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaM6dNyDusAZ1N6jXlXyp3d72eKiKXFSZzTutf9YyCJz1Bibj3VBVcHptJAKPgf5dOLuU&usqp=CAU" alt=""> -->
+                 <!-- <img src="https://media.istockphoto.com/id/1403057389/vector/black-silhouette-of-a-cup-with-a-hot-drink.jpg?s=612x612&w=0&k=20&c=z65Y43_1rLPTM5Ffbn-j3I5TTEC4CNx0m-i07XmSSsE=" alt=""> -->
+                  <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQe1WInLaCCZ9Va0XeJzGIQaoAWvOaGk_IyKPtSQhOMzJXWqS5o3oy_n6x6rBIS2lD27zo&usqp=CAU" alt=""> -->
+                   <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOLnjeKSRGlquKgAQAKHXKwkRbmcrUBjGIn98b6qigtQhY5LMO4dEhWSYJVnwQjKnw0nM&usqp=CAU" alt=""> -->
+                    <img src="data:image/jpeg;base64,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" alt="">
+            </div>
+            <div class="items">
+                <a href="">About</a>
+                <a href="">Company</a>
+                <a href="">Store</a>
+                <a href="">Shop</a>
+                <a href="">Contact</a>
+            </div>
+            <!-- <img src="" alt=""> -->
+        </div>
+        <div class="banner">
+            <div class="massage animate__backInDown">
+                coffee  
+            </div>
+            <div class="mas">
+                MAKE YOUR DAY SPECIAL
+            </div>
+            <img src="" alt="">
+            <div class="img">
+                <img src="image_0901.jpg" alt="">
+            </div>
+
+            <button class="btn">
+                <svg class="many" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                    <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+                  </svg>
+            </button>
+            <div class="mass">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis soluta beatae dolor ullam tenetur est!
+            </div>
+            <div class="mass-1">
+                Lorem ipsum dolor sit amet.
+            </div>
+            <button class="bt">SHOP NOW</button>
+        </div>
+        <div class="who">
+            <div class="image-1">
+                <!-- <img src="dagmara-dombrovska-abjaFxNVhiA-unsplash.jpg" alt=""> -->
+                <img src="https://c.ndtvimg.com/2020-12/6q2s6c1_coffee_625x300_31_December_20.jpg?downsize=773:435" alt="">
+            </div>
+            <div class="massage-1">
+                <div class="le">
+
+                    WHO ARE WE ?
+                </div>
+                    <div class="para">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo excepturi corporis alias accusantium consectetur illo mollitia tenetur ipsum quidem fuga autem tempora beatae sapiente eligendi itaque consequuntur nihil, maxime accusamus asperiores blanditiis. Voluptate magnam molestiae explicabo rem harum quidem eius?
+                    </div>
+                    <div class="para-2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni id reprehenderit sapiente praesentium, iure sed aperiam sit tenetur blanditiis soluta ipsa error assumenda, earum consectetur architecto temporibus magnam, exercitationem eveniet ipsum laboriosam fuga! Veniam dolor nam consequuntur tempore harum labore!
+                    </div>
+                    <button class="btn-1">
+                        BEAD MORE
+                    </button>
+                </div>
+                <div class="image-2">
+                    <img src="https://www.mashed.com/img/gallery/12-mistakes-people-make-when-storing-coffee-beans-according-to-the-experts/intro-1723569401.jpg    " alt="">
+                </div>
+                
+        </div>
+        
+            <div class="first">
+                OUR BEST SERVICE
+            </div>
+            <div class="lo">
+                Lorem ipsum dolor sit amet,  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse reprehenderit dolorum adipisci similique, voluptates sequi unde temporibus labore sint quae? Pariatur error natus officia rem ratione deleniti voluptatem. Ut, ores expedita ullam error non accusamus dolore! Libero, non. Impedit eos nulla numquam!
+            </div>
+
+            <div class="box">
+                <div class="box-1">
+                    <!-- <img src="" alt=""> -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-house-check-fill" viewBox="0 0 16 16">
+                        <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z"/>
+                        <path d="m8 3.293 4.712 4.712A4.5 4.5 0 0 0 8.758 15H3.5A1.5 1.5 0 0 1 2 13.5V9.293z"/>
+                        <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.707l.547.547 1.17-1.951a.5.5 0 1 1 .858.514"/>
+                      </svg>
+                    <h4>THE BEST WORLD SPORTS</h4>
+                    <P>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis aspernatur numquam accusantium obcaecati repellat necessitatibus.</P>
+                </div>
+                <div class="box-2">
+                    <!-- <img src="" alt=""> -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-sign-railroad-fill" viewBox="0 0 16 16">
+                        <path d="M9.05.435c-.58-.58-1.52-.58-2.1 0L4.224 3.162 8 6.94l3.777-3.777L9.049.435Zm3.274 7.425v-.862h.467c.28 0 .467.154.467.44 0 .28-.182.421-.475.421h-.459Z"/>
+                        <path d="M12.838 4.223 9.06 8l3.777 3.777 2.727-2.728c.58-.58.58-1.519 0-2.098zm.03 2.361c.591 0 .935.334.935.844a.79.79 0 0 1-.485.748l.536 1.074h-.59l-.467-.994h-.473v.994h-.521V6.584h1.064Zm-1.091 6.254L8 9.06l-3.777 3.777 2.728 2.727c.58.58 1.519.58 2.098 0zm-8.953-5.84v.861h.46c.292 0 .474-.14.474-.421 0-.286-.188-.44-.467-.44z"/>
+                        <path d="M3.162 11.777 6.94 8 3.162 4.223.435 6.951c-.58.58-.58 1.519 0 2.098zm-.86-5.193h1.065c.592 0 .936.334.936.844 0 .39-.242.654-.485.748l.536 1.074h-.59l-.467-.994h-.473v.994h-.521V6.584Z"/>
+                      </svg>
+                    <h4>MANY POINTS OF SALE</h4>
+                    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur dolore cupiditate soluta minus veniam facilis libero architecto dignissimos.</P>
+                </div>
+                <div class="box-3">
+                    <!-- <img src="" alt=""> -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-car-front" viewBox="0 0 16 16">
+                        <path d="M4 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0m10 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0M6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2zM4.862 4.276 3.906 6.19a.51.51 0 0 0 .497.731c.91-.073 2.35-.17 3.597-.17s2.688.097 3.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 10.691 4H5.309a.5.5 0 0 0-.447.276"/>
+                        <path d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679q.05.242.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.8.8 0 0 0 .381-.404l.792-1.848ZM4.82 3a1.5 1.5 0 0 0-1.379.91l-.792 1.847a1.8 1.8 0 0 1-.853.904.8.8 0 0 0-.43.564L1.03 8.904a1.5 1.5 0 0 0-.03.294v.413c0 .796.62 1.448 1.408 1.484 1.555.07 3.786.155 5.592.155s4.037-.084 5.592-.155A1.48 1.48 0 0 0 15 9.611v-.413q0-.148-.03-.294l-.335-1.68a.8.8 0 0 0-.43-.563 1.8 1.8 0 0 1-.853-.904l-.792-1.848A1.5 1.5 0 0 0 11.18 3z"/>
+                      </svg>
+                    <h4>24/7 FAST DELEVERY</h4>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque doloremque nemo a cupiditate non eius quam in totam hic quisquam!</p>
+                </div>
+            </div>
+
+            <div class="best">
+                <div class="head">
+                    OUR BEST PRODUCTS
+                </div>
+                <div class="para-3">
+                    Lorem ipsum, dolor sit amet consectetur adipisi i1cing elit. Repellat excepturi, atque voluptatem delectus asperiores quod quaerat earum repudiandae, similique, assumenda suscipit. At, maxime ipsam. Culpa quas quia mole
+                </div>
+                <div class="nox">
+                    <div class="nox-1">
+                        <img  src="dagmara-dombrovska-abjaFxNVhiA-unsplash.jpg" alt="" width="350px ">
+                        <h4 style="color: rgba(230, 156, 21, 0.874);">DFFEE BEAN</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis repellendus fugiat accusantium expedita similique dolorum maxime illum quaerat nulla aliquid repellat voluptatum recusandae velit nihil,.</p>
+                        <P class="na1">View outpit <svg id="mah" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+                          </svg></P>
+                    </div>
+                    <div class="nox-2">
+                        <img class="i"src="mayumi-maciel-NDqpUti3dqE-unsplash.jpg" alt="" width="350px" height="235px">
+                        <h4 style="color: rgba(230, 156, 21, 0.874);">AMERICAN BLAK COFFEE</h4>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores quo maiores fugiat quibusdam. Consequatur assumenda ipsa distinctio facere fugiat sit non maxime mollitia corporis vitae sequi enim, quo inventore quod!</p>
+                        <P class="na1">View outpit <svg id="muh" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+                          </svg></P>
+                    </div>
+                    <div class="nox-3">
+                        <img src="dagmara-dombrovska-yRydvP_pxa4-unsplash.jpg" alt="" width="350px">
+                        <h4 style="color: rgba(230, 156, 21, 0.874);">EPHIOPLAN AROMA</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quibusdam placeat beatae alias minus pariatur consequatur porro aspernatur accusantium exercitationem. Impedit ad odit beatae quia.</p>
+                        <P class="na1" >View outpit <svg id="muh" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+                          </svg></P>
+                    </div>
+                    <div class="nox-4">
+                        <img src="nathan-dumlao-r-KfktlyBL0-unsplash.jpg" alt="" width="350px">
+                        <h4 style="color: rgba(230, 156, 21, 0.874);">COFFEA CANEPHORA</h4>
+                        <P>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione, optio earum nulla sapiente error molestias amet repellat doloribus pariatur reprehenderit cumque eius ducimus veniam quisquam quia vitae!</P>
+                        <P class="na1">View outpit <svg id="muh" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+                          </svg></P>
+                    </div>
+                </div>
+            </div>
+            <div class="happy">
+                HAPPY CUSTOMERS
+            </div>
+            <div class="mass-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae reprehenderit nisi, tempora aliquam asperiores necessitatibus repellendus quaerat deserunt pariatur velit?
+            </div>
+            <div class="cox">
+                <div class="cox-1">
+                    <div class="c1">
+                        <img src="pexels-japheth-569169.jpg" alt="" width="60">
+                    </div>
+                    <div class="c11">
+                        <img src="pexels-jonas-mohamadi-1427288.jpg" width="50" alt="" >
+                    </div>
+                    <div class="c12">
+                        <img src="pexels-juanlaurio-1288182.jpg" width="50" alt="" >
+                    </div>
+                </div>
+                <div class="cox-2">
+                    <div class="c222">
+                        <img src="pexels-jeffreyreed-769772.jpg" width="50" alt="" class="c2">
+                        
+                        <p class="k1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos, cum inventore recusandae minus pariatur animi. Dicta officia eaque pariatur, quidem sequi dolore voluptates aut quae.</p>
+                        <h5 class="k2" >MUNNA BHAI</h5>
+                        <p class="k3"> i'm nikhil</p>
+                    </div>
+                </div>
+                <div class="cox-3">
+                    <div class="c3">
+                        <img src="dagmara-dombrovska-yRydvP_pxa4-unsplash.jpg" width="70" alt="" class="c3">
+                    </div>
+                    <div class="c33">
+                        <img src="pexels-soldiervip-1549974.jpg" width="50" alt="" class="c3">
+                    </div>
+                    <div class="c333">
+                        <img src="pexels-moh-adbelghaffar-764340.jpg" width="40" alt="" class="c3">
+                    </div>
+                </div>
+            </div>
+            <div class="man">
+            <div class="choose">
+                CHOOSE YOUR PLAN
+            </div>
+            <div class="mass-5">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque quisquam atque fugit adipisci aliquam dolorem in, vero magni maiores deserunt et architecto nisi id! Ipsum reprehenderit quis tempora velit doloribus!
+            </div>
+            </div>
+            <div class="dox">
+
+                <div class="dox-1">
+                    <div class="dol">
+                        $17
+                    </div>
+                    <div class="light">
+                      <h4>lIGHT SET</h4> 
+                      <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/>
+</svg>this light</p>
+                      <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/>
+</svg> company nike</p>
+                      <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/>
+</svg> center admin nag</p>
+                      <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/>
+</svg> other and may can</p>
+                      <button class="btn-3">BOOK NOW </button>
+                    </div>
+                </div>
+                <div class="dox-2">
+                    <div class="memory">
+                        $59
+                    </div>
+                 
+                 <div class="look">
+                    <h4>I AM DON</h4>
+                    <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/>
+                      </svg>i </p>
+                    <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+                      </svg>i am nikhil</p>
+                    <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/>
+</svg>i am nikhil</p>
+                    <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/>
+</svg>i am nikhil</p>
+                    <button class="btn-6">BOOK NOW</button>
+                 </div>
+                </div>
+                <div class="dox-3">
+                        <div class="dol">
+                            $75
+                        </div>
+                        <div class="light">
+                        <h4>PREMIUM SET</h4> 
+                        <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/>
+</svg>this light</p>
+                        <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/>
+</svg> company nike</p>
+                        <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/>
+</svg> center admin nag</p>
+                        <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/>
+</svg> other and may can</p>
+                        <button class="btn-3">BOOK NOW     </button>
+                </div>
+            </div>
+        
+         
+</div>
+
+            <div class="sos">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdAxE-F99qS4jxaa7RpjTe5DEK_9wUng6o_v9BKN64_LjlIZuSWOxyDmlTWJ-08WI8774&usqp=CAU" alt="">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyDeC3ol8y2FtDbrKlo5NbN_Go2YjUlR6wNReSf6-L0V8RQPb8rvqu5n0iK5Y_GUZ-QEw&usqp=CAU" alt="">
+<img src="data:image/png;base64,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" alt="">
+<img src="https://t3.ftcdn.net/jpg/06/06/68/04/360_F_606680429_jvcBg3u3ZmDz3kOLTlyYa8vpeWIIh8AV.jpg" alt="">
+            </div>
+            <div class="jox">
+                <div class="jox-1">
+                    <img src="fabian-blank-dDx68jMHv0I-unsplash.jpg" alt="" width="500">
+                </div>
+                <div class="jox-2">
+                    <div class="mass-7">
+                        COFFEE IS BLOOD
+                    </div>
+                    <div class="para-12">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum tempore sed quasi aliquid provident beatae dicta unde mollitia consectetur? Voluptates harum porro optio debitis soluta libero, et veritatis pariatur nulla.
+                    </div>
+                    <button class="btn-5">
+                        SHOP NOW
+                    </button>
+                </div>
+            </div>
+
+            <div class="last">
+                <div class="mass-9">
+                    <div class="mass-12">
+                     <h4>   Our monthly letter with exelisive inlghits</h4>
+                    </div>
+                    <button class="btn-12">programer</button> <br>
+                    <div class="love">
+                    <h4>Follow us on :</h4> <br>
+                    <a class="clas" href="https://www.facebook.com"><img src="data:image/webp;base64,UklGRvoBAABXRUJQVlA4WAoAAAAQAAAAHwAAHwAAQUxQSJ8AAAARR6CgjSQ1eBKYHyy8jI+IgLT+Dy/BjW3bavKSIK3OgTYlpcsAtKQjJQ597M77y5lCRP8ZuG2kyMu8B68wF/LD97bJLAyLVpL+k8C8lbzY8QwaBaFInKciYerKNuafmF0VDT2zKm7vtePNuSB07qRfkllF9jW5NKRoyZ9xg6fwRvwe+D3xe+T3jN+BvxN/R/zO/B/gf8L/URjySvL/MwMAVlA4IDQBAACwBwCdASogACAAPtE+tFooIigoFAEAGglsAJ0yhHUHrv4k/jNyLOIDHAegDmGNwB0AN4g9B3pMQbgPCrDtgAA7MsPM8Q8AAJkzi3efCuNC6ZDQM/qbU91L9/yZJykM3mXgf9rBQ7Tcpj/8hmK1d3/75ZWdKfzLqowrhV+4wkjvPniSpmuOJuK3E1U2WB8B4LA3zjaEXgYDZ6yknenPECz7ygie4ovnFcnOFsu3dNwnvsyxK/wPnhmiUe7JevpwggGCPn1+u23yB+PgE434BTcrOdimjcgx3qVuHC7eIhP9J/6fgQOE/GaclyEa2OE0k0BWP6K7ukusogJHa/rQHrG/+B8BDt9pb8SICkz1ztABfuBXfxz7QjAnvRxGPs0bB38MNr3z47ZP3HT5ZFyJJ1t9BpCAAA==" alt=""></a>&nbsp;&nbsp;&nbsp;
+                    <a class="clas" href="https://www.instagram.com"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAABWVBMVEVyHVFHcEx0Fvp8Fv1yFP1/FfyLCOyfBOmtAeS7AuDHAd3UANjZAs7rD6xyFvzjANTqAMHoA7l2F/yPFfx8GPmfD/zFF/XVWujoZuLyZt3pRt/yGdHyA8j1AKTViPj/9Pr////8g9f9A7r3DZz5vO794Pf+ruj9B6uzFPv7JLv+AJr+BI/+YMP/1vD+AIThG+n9GZn/vd3/YZz+AXP+GoT/r8r+AmT/b5z+HHH+I3f+G2P/ur7+FFD+Klb+fYv/wcr+LUf+LWX+AFn+Nzr+Ohz+RT7+inP+Si7/ztD+TxL/zbv+Wy//9fH+WgL+c1X+ZyX+PUv+Bzv+VXD+cxr/6eL+aQT+eAX+nDj+gwD+gxH+fSL+rYn+jwD+iwL+XhX/3rn/1bH9ZR/+lwP+nwH+xHH8ZC3+qAH+sAD+wAP+x1P+zGb+pl79mQn+uAD9J3T+ygD9O1n8pRL9twuaEkMNAAAAc3RSTlMBAF3G///////////GW9j//9nY/1r///////////7//////8b/////////////////////////////////////////////////////////////////////////////////xf///1v////////Y/9j/2VzGSus+GgAAAeNJREFUeAFFjEWiU0EQRc/tqu74V9wZ4TBiB6wG3wpzVoQ7zHCXeELypHH+KVchJAESaEs0IUv0Zv+7fwLgSAOk9ZFghcnfDw4AAg18cyhWCKNVob9NCZjQLWVrEGhJbJGDoCBpMwCrJTETAKBWgdeRGb4dmJW56PdI/KU1K4X15N+AFsW0+3/WVm7Pa0Pmu4Fh7HcbRIjMIhr3FItUGAH4SNZKjK32YjKpK3Iv0yUY0b8g0Vs0oK+8wbeyMBAQwVeo44R1z7XWq6rqpn5jiTmAeQO3iceg9zkYzKvc71iEmMFbqCJJ4tDcKFrLjX5D/MEdq8GpIUUgd/tgGboTgiUDPDZ44SXNpr0gWRcAgqEmEPJRNVPOxYaOth0oAHdCxWoOzslH+RCvlafYMgFUHvAIHoCjz16io80BrH/j0AAcJ9KWKkhn5sRyGjsDtr/sqyrsWNO1cW9/cDNLZgHLSzVvn+wMq9qbKKwy7TiIaKTW56pzW6Oa+N1OKEQdvvl2RyOE4DEOZurd1cHNeab27tyjOPfhFlucXP04ovF97B6jTOzdJwFLaNAff7N6c8incH1VpiSR67q2VgjzUU7JgbMTiQtFKmgAsCAuczlflmVZn7iGBFc1awB/p4tqUS3LDb8OPwBrSrZIO/KHZwAAAABJRU5ErkJggg==" alt=""></a>&nbsp;&nbsp;&nbsp;
+                    <a class="clas" href="https://www.twitter.com"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAAAAABXZoBIAAAA/0lEQVR4AbXPIazCMACE4d+L2qoZFEGSIGcRc/gJJB5XMzGJmK9EN0HMi+qaibkKVF1txdQe4g0YzPK5yyWXHL9TaPNQ89LojH87N1rbJcXkMF4Fk31UMrf34hm14KUeoQxGArALHTMuQD2cAWQfJXOpgTbksGr9ng8qluShJTPhyCdx63POg7rEim95ZyR68I1ggQpnCEGwyPicw6hZtPEGmnhkycqOio1zm6XuFtyw5XDXfGvuau0dXHzJp8pfBPuhIXO9ZK5ILUCdSvLYMpc6ASBtl3EaC97I4KaFaOCaBE9Zn5jUsVqR2vcTJZO1DdbGoZryVp94Ka/mQfE7f2T3df0WBhLDAAAAAElFTkSuQmCC" alt=""></a>&nbsp;&nbsp;&nbsp;
+                    <a class="clas" href="https://linkedin.com"target="info"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABDUlEQVR4AWP4////gOLB44D6nTcsGIo33QHi/zTGd0B2YTiAPpYjHIHNAf/piQk6wGPW8f/rLz8HYRCbXg5AWI4GQGJ0cwDY12gAJDbcHUA4CkZAIqQUK7Ts/m/SfxBMs5RupswBaACr+P47b/5zlG/5DyzZ/r/+8hNF7vuvP//nn3r0X6JhJ+0ccPrR+/+H7735jw9cf/n5v0D1Nuo5gBxQve06zR0AjoL7b7/+//zjN4bc+ScfaOeA33///k9Yfg4mDw7u/Xdeo6uhnQP6D93FMNxlxjF0ZbRzgMXEQ9iyI90cALIMJoccDXRzAK6CZog6YNQBow6gIx54Bwx4x2RAu2bAysoEZu9o7xgAQrvkxt3WZi0AAAAASUVORK5CYII=" alt=""></a>
+                    </div>
+                    <img class="mike" src="https://i.pinimg.com/474x/19/f5/27/19f527d0c986723220a8ec6cedbbee46.jpg" alt="" width="200">
+                    <img class="mike-1" src="https://i.pinimg.com/474x/19/f5/27/19f527d0c986723220a8ec6cedbbee46.jpg" alt="" width="200">
+                    <img class="mike-2" src="https://i.pinimg.com/474x/19/f5/27/19f527d0c986723220a8ec6cedbbee46.jpg" alt="" width="200">
+                </div>
+                <div class="mass-6">
+                    <div class="link-1">
+                        <h4>Quick Link</h4>
+                        <p> one </p>
+                        <p>two</p>
+                        <p>three</p>
+                        <p>four</p>
+                        <p>matter</p>
+                        <p>coffee</p>
+                    </div>
+                    <div class="link-2">
+                        <h4>product</h4>
+                        <p>coffee</p>
+                        <p>coffee mag</p>
+                        <p> mag</p>
+                        <p>aniamition</p>
+                        <p>productr</p>
+                        <p>caffee</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+</body>
+</html>
